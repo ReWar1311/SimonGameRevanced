@@ -55,3 +55,21 @@ body{
 .num9{
     background-color: red;
 }
+@media only screen and (max-width: 768px){
+    .container{
+        display: flex;
+        padding: 0vw 5vw;
+        flex-direction: column;
+    }
+    .row{
+        display: flex;
+        flex-direction: row;
+    }
+    .num{
+        width: 30vw;
+        height: 30vw;
+        margin: 0.1vw;
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+        color: aliceblue;
+    }
+}

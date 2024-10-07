@@ -3,9 +3,11 @@ gameOver();
 function gameOver(){
     array=[]
     document.addEventListener("keypress", restart);
+    document.addEventListener("click", restart);
 };
 function restart(){
     document.removeEventListener("keypress", restart);
+    document.removeEventListener("click", restart);
     start(1);
 }
 function start(n) {
