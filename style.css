@@ -1,0 +1,57 @@
+body{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: aquamarine;
+}
+.finish{
+    background-color: red;
+}
+.container{
+    display: flex;
+    padding: 0vw 33vw;
+    flex-direction: column;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.num{
+    width: 10vw;
+    height: 10vw;
+    margin: 0.5vw;
+    background-color: aqua;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    font-size: 5vw;
+    color: aliceblue;
+}
+.pressed{
+    opacity: 0.5;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.num1{
+    background-color: blue;
+}
+.num2{
+    background-color: pink;
+}
+.num3{
+    background-color: skyblue;
+}
+.num4{
+    background-color: brown;
+}
+.num5{
+    background-color: orange;
+}
+.num6{
+    background-color: green;
+}
+.num7{
+    background-color: yellow;
+}
+.num8{
+    background-color: purple;
+}
+.num9{
+    background-color: red;
+}
