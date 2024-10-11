@@ -22,7 +22,8 @@ function restart(){
     start(1);
 }
 function start(n) {
-  console.log("start")
+  $("button").text("Restart");
+  console.log("start");
     var random = Math.floor(((Math.random()) * 9) + 1);
     array.push(random);
     setTimeout(function(){
@@ -85,7 +86,7 @@ function keyp(i, n) {
                     $("body").removeClass("finish");       
                  },300)
                 
-                $("h1").text("FINISHED, Your score was: "+n+" Press any key to Restart");
+                $("h1").html("FINISHED, Your score was: <span>"+n+"</span></br> Press any key/Restart button to start again from level 1");
                 gameOver();
             }
         }
