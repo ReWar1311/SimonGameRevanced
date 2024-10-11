@@ -1,22 +1,28 @@
 var array = [];
-var path ="./assets/gree.mp3";
+var path ="./assets/green.mp3";
 var audio= new Audio(path);
-audio.play(); 
+audio.play();
+document.querySelector(".button-6").addEventListener("click", function(){
+  restart();
+}); 
 gameOver();
 function gameOver(){
+    console.log("gameover")
     array=[]
     document.addEventListener("keypress", restart);
-    document.addEventListener("click", restart);
 };
 function restart(){
+    console.log("restart")
     var path ="./assets/green.mp3";
     var audio= new Audio(path);
     audio.play(); 
+    console.log(this)
     document.removeEventListener("keypress", restart);
     document.removeEventListener("click", restart);
     start(1);
 }
 function start(n) {
+  console.log("start")
     var random = Math.floor(((Math.random()) * 9) + 1);
     array.push(random);
     setTimeout(function(){
@@ -42,9 +48,13 @@ function keyp(i, n) {
         };
 
         function handleKeypress(event) {
+          document.removeEventListener("keypress", handleKeypress);
             done(event.key, i, n);
         }
-        function handlemousepress(){
+        function handlemousepress(event){
+          for(var x=0; x<9 ;x++){
+            document.querySelectorAll(".num")[x].removeEventListener("click", handlemousepress);
+            };
             done(this.innerHTML,i,n);
         };
 
@@ -52,17 +62,13 @@ function keyp(i, n) {
             console.log(m, i, n);
             if (m == array[i]) {
                 console.log(m, i, n);
-                clicked(m)
-                document.removeEventListener("keypress", handleKeypress);
-                for(var x=0; x<9 ;x++){
-                    document.querySelectorAll(".num")[x].removeEventListener("click", handlemousepress);
-                    }; // Remove listener before calling next
+                clicked(m) // Remove listener before calling next
                 keyp(i + 1, n); // Go to the next key in the sequence
             } else {
                 $("body").addClass("finish") 
                 var path ="./assets/wrong.mp3";
                 var audio= new Audio(path);
-                audio.play();      
+                audio.play();     
                 setTimeout(function(){
                     $("body").removeClass("finish");  
                     // var path ="./assets/w.mp3";
@@ -78,10 +84,6 @@ function keyp(i, n) {
                  setTimeout(function(){
                     $("body").removeClass("finish");       
                  },300)
-                for(var x=0; x<9 ;x++){
-                    document.querySelectorAll(".num")[x].removeEventListener("click", handlemousepress);
-                    };
-                document.removeEventListener("keypress", handleKeypress);
                 
                 $("h1").text("FINISHED, Your score was: "+n+" Press any key to Restart");
                 gameOver();
