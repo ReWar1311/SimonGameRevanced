@@ -52,8 +52,8 @@ span{
 }
 body{
     text-align: center;
-    font-family: 'Roboto', sans-serif;
-    background-color: aquamarine;
+    font-family: cursive;
+    background-color: navajowhite;
 }
 .finish{
     background-color: red;
@@ -75,6 +75,11 @@ body{
     box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
     font-size: 5vw;
     color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 10px;
 }
 .pressed{
     opacity: 0;
@@ -99,7 +104,7 @@ body{
     background-color: green;
 }
 .num7{
-    background-color: yellow;
+    background-color: black;
 }
 .num8{
     background-color: purple;
